@@ -17,14 +17,14 @@ export const StyledWrapper = styled.div`
 
 export const StyledFullScreenWrapper = styled.div`
   width: 100vw;
-  height: 70vh;
+  height: 60vh;
   display: flex;
   overflow: hidden;
 `
 
 export const StyledContentCenterWrapper = styled.div`
   display: grid;
-  grid-template-columns: minmax(750px, 1fr);
+  grid-template-columns: minmax(min-content, 1fr);
   justify-items: center;
   text-align: center;
   color: #ccc;

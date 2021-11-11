@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Hero from "./hero"
 import "./layout.css"
+import { useIntersect } from '../../hooks/useIntersect'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,9 +25,13 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const [ref, entry] = useIntersect({
+    threshold: 0
+  })
+
   return (
     <>
-      <Header />
+      <Header ref={ref} />
       <Hero
         siteTitle={data.site.siteMetadata?.title || `Title`}
       />

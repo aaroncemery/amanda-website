@@ -1,23 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { device } from './device'
 import { StyledContentWrapperRight, StyledContainer } from './SharedStyleComponents'
 import HeroImage from './HeroImage'
 
-// let headerHeight = document.querySelector('.header')
-// console.log(headerHeight.offsetHeight)
-
 const StyledRightWrapper = styled(StyledContentWrapperRight)`
   margin-top: 5rem;
-`
-
-const StyledOutsideLink = styled.a`
-  margin-left: 0.32rem;
+  padding-top: 95px;
+  @media ${device.laptop} {
+    padding-top: 100px;
+  }
 `
 
 const StyledContent = styled.div`
   max-width: 600px;
-  padding-top: 170px;
+  padding: 60px;
+  background: rgba(255,255,255, 0.9);
+  border-radius: 4px;
+  color: #000C2C;
 `
 
 const Hero = ({paddingOffset}) => (

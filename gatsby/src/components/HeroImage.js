@@ -1,8 +1,9 @@
+import BackgroundImage from 'gatsby-background-image'
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 
-import BackgroundImage from 'gatsby-background-image'
+import { device } from './device'
+import { graphql, useStaticQuery } from 'gatsby'
 import { StyledFullScreenWrapper } from './SharedStyleComponents'
 
 /**
@@ -51,7 +52,7 @@ const FullBackground = ({ className, children }) => {
 
 const StyledFullBackground = styled(FullBackground)`
   width: 100vw;
-  height: 70vh;
+  height: 60vh;
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
