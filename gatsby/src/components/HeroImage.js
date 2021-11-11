@@ -13,7 +13,7 @@ import { StyledFullScreenWrapper } from './SharedStyleComponents'
  * @return {*}
  * @constructor
  */
-const FullBackground = ({ className, children }) => {
+const FullBackground = ({ className, children, image }) => {
   const { desktop } = useStaticQuery(
     graphql`
       query {
@@ -30,13 +30,14 @@ const FullBackground = ({ className, children }) => {
 
   // Single Image Data
   const imageData = desktop.childImageSharp.fluid
+  console.log(imageData);
 
   return (
     <StyledFullScreenWrapper>
       <BackgroundImage
         Tag="section"
         className={className}
-        fluid={imageData}
+        fluid={image}
         backgroundColor={`#040e18`}
         title="Fullscreen Background"
         id="fullscreenbg"
