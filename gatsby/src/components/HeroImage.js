@@ -1,10 +1,9 @@
+import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 import React from 'react'
 import styled from 'styled-components'
-
-import { device } from './device'
-import { graphql, useStaticQuery } from 'gatsby'
 import { StyledFullScreenWrapper } from './SharedStyleComponents'
+
 
 /**
  * In this functional component a fullscreen <BackgroundImage />  is created.
@@ -34,6 +33,7 @@ const FullBackground = ({ className, children, image }) => {
 
   return (
     <StyledFullScreenWrapper>
+      <h1 className="testing">test</h1>
       <BackgroundImage
         Tag="section"
         className={className}
